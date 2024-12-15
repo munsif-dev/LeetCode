@@ -4,11 +4,8 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        i=0
-        while i < (len(nums)-1):
-            if nums[i] == nums[i+1]:
-                nums.pop(i)
-            else:
-                i += 1
-        return len(nums)
-            
+        nums[:] = [nums[i] for i in range(len(nums)) if i==len(nums)-1 or nums[i]!=nums[i+1]]
+        
+        print(len(nums))
+
+
