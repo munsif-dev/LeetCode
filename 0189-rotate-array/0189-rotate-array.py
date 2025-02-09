@@ -16,4 +16,5 @@ class Solution(object):
 
         else:
             k = k%n
-            return nums[-k:] + nums[:(n-k)]
+            nums[:] = nums[-k:] + nums[:(n-k)]
+            return nums
