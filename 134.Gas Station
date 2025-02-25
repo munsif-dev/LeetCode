@@ -1,0 +1,31 @@
+class Solution(object):
+    def canCompleteCircuit(self, gas, cost):
+        """
+        :type gas: List[int]
+        :type cost: List[int]
+        :rtype: int
+        """
+        n = len(gas)
+        
+        for i in range(n):
+            if gas[i] >= cost[i]:
+                tank = 0
+                a = (i+1)%n
+                tank = tank + gas[i] - cost[i] + gas[a]
+                print("tank1", tank,i)
+                start = i
+                j = (i+1) % n
+                while(tank >= cost[j] and (j != start)):
+                    tank = tank - cost[j] 
+                    print("tank2",tank)
+                    j = (j + 1) % n
+                    print(j)
+                    tank = tank + gas[j]
+                    print("tank_:",tank)
+                if j is start:
+                    return start
+        return -1
+
+
+
+
