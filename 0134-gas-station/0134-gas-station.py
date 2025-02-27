@@ -11,10 +11,10 @@ class Solution(object):
         tank = 0
         start = 0
         for i in range(n):
-            if tank + gas[i] > cost[i]:
-                tank = tank + gas[i] - cost[i]
-            else:
-                start += 1
+            tank = tank + gas[i] - cost[i]
+            if tank < 0:
+                tank = 0
+                start = i + 1
         
         return start
             
