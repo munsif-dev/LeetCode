@@ -16,4 +16,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0151-reverse-words-in-a-string](https://github.com/munsif-dev/LeetCode/tree/master/0151-reverse-words-in-a-string) |
+## Array
+|  |
+| ------- |
+| [1929-concatenation-of-array](https://github.com/munsif-dev/LeetCode/tree/master/1929-concatenation-of-array) |
+## Simulation
+|  |
+| ------- |
+| [1929-concatenation-of-array](https://github.com/munsif-dev/LeetCode/tree/master/1929-concatenation-of-array) |
 <!---LeetCode Topics End-->
