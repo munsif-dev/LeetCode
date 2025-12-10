@@ -19,6 +19,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Array
 |  |
 | ------- |
+| [0485-max-consecutive-ones](https://github.com/munsif-dev/LeetCode/tree/master/0485-max-consecutive-ones) |
 | [1929-concatenation-of-array](https://github.com/munsif-dev/LeetCode/tree/master/1929-concatenation-of-array) |
 ## Simulation
 |  |
