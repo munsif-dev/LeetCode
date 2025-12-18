@@ -1,21 +1,33 @@
 class Solution:
+    def isExpression(self, token: str) -> bool:
+        return (token in "+-*/")
+    
+    def evalEquation(self, x: int, y: int, operand: str) -> int:
+        match operand:
+            case "+":
+                return x + y
+            case "-":
+                return x - y
+            case "*":
+                return x * y
+            case "/":
+                return math.trunc(x / y)
+            case _:
+                raise f"No valid operand found for {operand} in {a} {operand} {b}."
+
     def evalRPN(self, tokens: List[str]) -> int:
-        n = len(tokens)
-        i = 2
-        while i < len(tokens):
-            if tokens[i] in ["*", "+", "-", "/"]:
-                match tokens[i]:
-                    case "+":
-                        tokens[i-2:i+1] = [int(tokens[i-1]) + int(tokens[i-2])]
-                    case "-":
-                        tokens[i-2:i+1] = [int(tokens[i-2]) - int(tokens[i-1])]
-                    case "*":
-                        tokens[i-2:i+1] = [int(tokens[i-1]) * int(tokens[i-2])]
-                    case "/":
-                        tokens[i-2:i+1] = [int(int(tokens[i-2]) / int(tokens[i-1]))]
-                i = 2
+        stack = []
+
+        for token in tokens:
+            if (self.isExpression(token)):
+                y, x = stack.pop(), stack.pop()
+                stack.append(self.evalEquation(x, y, token))
             else:
-                i += 1
+                stack.append(int(token))
         
-        return int(tokens[0])
-                
+        return stack[0]
+
+
+
+
+        
