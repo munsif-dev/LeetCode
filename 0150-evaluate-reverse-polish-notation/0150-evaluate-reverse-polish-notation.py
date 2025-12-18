@@ -12,7 +12,7 @@ class Solution:
                     case "*":
                         tokens[i-2:i+1] = [int(tokens[i-1]) * int(tokens[i-2])]
                     case "/":
-                        tokens[i-2:i+1] = [int(tokens[i-2]) / int(tokens[i-1])]
+                        tokens[i-2:i+1] = [int(int(tokens[i-2]) / int(tokens[i-1]))]
                 i = 2
             else:
                 i += 1
